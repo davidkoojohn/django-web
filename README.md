@@ -60,4 +60,6 @@ $ source venv/bin/activate
 ```
 (venv)$ python manage.py migrate
 (venv)$ python manage.py runserver
+# ---
+(venv)$ python manage.py help
 ```
