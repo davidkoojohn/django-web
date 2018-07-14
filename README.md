@@ -84,6 +84,8 @@ $ source venv/bin/activate
 
 
 
+## 参考
 
+* [Django官方文档](https://docs.djangoproject.com/zh-hans/2.0/)
 
 
