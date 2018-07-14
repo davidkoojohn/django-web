@@ -81,8 +81,13 @@ $ source venv/bin/activate
 * `tests.py`：包含测试应用各项功能的测试类和测试函数。
 * `views.py`：处理请求并返回响应的函数（MVC中的C，MVT中的V）
 
+---
 
+> create modal file then run makemigrations
 
+```
+(venv)$ python manage.py makemigrations hrs(package name)
+```
 
 ## 参考
 
