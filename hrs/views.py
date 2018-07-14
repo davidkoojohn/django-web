@@ -1,5 +1,3 @@
-from django.http import HttpResponse
-# from io import StringIO
 from django.shortcuts import render
 
 depts_list = [
@@ -9,19 +7,6 @@ depts_list = [
 ]
 
 def index(request):
-  # output = StringIO()
-  # for dept in depts_list:
-  #   output.write('\t\t<div>\n')
-  #   output.write(f'\t\t\t<span>{dept["no"]}</span>\n')
-  #   output.write(f'\t\t\t<span>{dept["name"]}</span>\n')
-  #   output.write(f'\t\t\t<span>{dept["location"]}</span>\n')
-  #   output.write('\t\t</div>\n')
-
   return render(request,
                 'hrs.html',
                 {'depts_list': depts_list})
-
-  # return HttpResponse(output.getvalue())
-
-
-
