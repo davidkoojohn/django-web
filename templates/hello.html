@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>VOTE</title>
+  <style>
+    body {
+      margin: 0 auto;
+      width: 768px;
+    }
+
+    dl {
+      margin: 20px 10px;
+    }
+  </style>
 </head>
 <body>
-<h1>{{title}}</h1>
+<h1>学科信息</h1>
+{% for subject in subjects %}
+<dl>
+  <dt><a href="/subjects/{{ subject.no }}">{{subject.name}}</a></dt>
+  <dd>{{subject.intro}}</dd>
+</dl>
+{% endfor %}
 </body>
 </html>

@@ -1,5 +1,8 @@
 from django.shortcuts import render
+from hellodjango.models import Subject
 
 def index(request):
-  return render(request, 'hello.html', {'title': '投票'})
+  print(Subject.objects.all())
+  ctx = {'subjects': Subject.objects.all()}
+  return render(request, 'hello.html', ctx)
 

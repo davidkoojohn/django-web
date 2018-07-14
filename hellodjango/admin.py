@@ -9,5 +9,5 @@ class TeacherAdmin(admin.ModelAdmin):
   list_display = ('no', 'name', 'intro', 'motto', 'photo', 'subject', 'manager', 'good_count', 'bad_count')
   ordering = ('no',)
 
-admin.site.register(Subject)
-admin.site.register(Teacher)
+admin.site.register(Subject, SubjectAdmin)
+admin.site.register(Teacher, TeacherAdmin)
