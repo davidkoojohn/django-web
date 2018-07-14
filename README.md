@@ -63,3 +63,27 @@ $ source venv/bin/activate
 # ---
 (venv)$ python manage.py help
 ```
+
+---
+
+## create pages
+
+1. create page(创建名为hrs（人力资源系统）的应用（注：一个项目可以包含多个应用）)
+
+```
+(venv)$ python manage.py startapp hrs
+```
+
+* `admin.py`：可以用来注册模型，让Django自动创建管理界面。
+* `apps.py`：当前应用的配置
+* `migrations/`：存放与模型有关的数据库迁移信息
+* `models.py`：存放应用的数据模型，即实体类及其之间的关系（MVC/MVT中的M）
+* `tests.py`：包含测试应用各项功能的测试类和测试函数。
+* `views.py`：处理请求并返回响应的函数（MVC中的C，MVT中的V）
+
+
+
+
+
+
+
