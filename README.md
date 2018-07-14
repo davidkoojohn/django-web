@@ -95,6 +95,17 @@ $ source venv/bin/activate
 (venv)$ python manage.py createsuperuser
 ```
 
+## [使用ORM完成模型的CRUD操作](./ORM.CRUD.md)
+
+```
+(venv)$ python manage.py shell
+```
+
+
+
+
+
+
 ## 参考
 
 * [Django官方文档](https://docs.djangoproject.com/zh-hans/2.0/)
