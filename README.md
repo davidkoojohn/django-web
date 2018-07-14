@@ -101,7 +101,22 @@ $ source venv/bin/activate
 (venv)$ python manage.py shell
 ```
 
+## [Django模型最佳实践](https://github.com/jackfrued/Python-100-Days/blob/master/Day41-55/02.%E6%B7%B1%E5%85%A5%E6%A8%A1%E5%9E%8B.md#django%E6%A8%A1%E5%9E%8B%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5)
 
+* 正确的为模型和关系字段命名。
+* 设置适当的related_name属性。
+* 用OneToOneField代替ForeignKeyField(unique=True)。
+* 通过“迁移操作”（migrate）来添加模型。
+* 用NoSQL来应对需要降低范式级别的场景。
+* 如果布尔类型可以为空要使用NullBooleanField。
+* 在模型中放置业务逻辑。
+* 用<ModelName>.DoesNotExists取代ObjectDoesNotExists。
+* 在数据库中不要出现无效数据。
+* 不要对QuerySet调用len()函数。
+* 将QuerySet的exists()方法的返回值用于if条件。
+* 用DecimalField来存储货币相关数据而不是FloatField。
+* 定义__str__方法。
+* 不要将数据文件放在同一个目录中。
 
 
 
