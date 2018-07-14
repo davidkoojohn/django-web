@@ -7,6 +7,9 @@ class Dept(models.Model):
   name = models.CharField(max_length=20, db_column='dname', verbose_name='部门名称')
   location = models.CharField(max_length=10, db_column='dloc', verbose_name='部门所在地')
 
+  def __str__(self):
+    return self.name
+
   class Meta:
     db_table = 'tb_dept'
 
@@ -17,11 +20,14 @@ class Emp(models.Model):
   name = models.CharField(max_length=20, db_column='ename', verbose_name='员工姓名')
   job = models.CharField(max_length=10, verbose_name='职位')
 
-  mgr = models.ForeignKey('self', on_delete=models.SET_NULL, null=True, blank=True, verbose_name='主管编号')
+  mgr = models.ForeignKey('self', on_delete=models.SET_NULL, null=True, blank=True, verbose_name='直接主管')
   sal = models.DecimalField(max_digits=7, decimal_places=2, verbose_name='月薪')
   comm = models.DecimalField(max_digits=7, decimal_places=2, null=True, blank=True, verbose_name='补贴')
 
   dept = models.ForeignKey(Dept, db_column='dno', on_delete=models.PROTECT, verbose_name='所在部门')
+
+  def __str__(self):
+    return self.name
 
   class Meta:
     db_table = 'tb_emp'

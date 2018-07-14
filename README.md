@@ -89,6 +89,12 @@ $ source venv/bin/activate
 (venv)$ python manage.py makemigrations hrs(package name)
 ```
 
+> createsuperuser
+
+```
+(venv)$ python manage.py createsuperuser
+```
+
 ## 参考
 
 * [Django官方文档](https://docs.djangoproject.com/zh-hans/2.0/)
