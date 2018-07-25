@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -11,7 +12,8 @@
 <hr>
 <p>{{ teacher.motto }}</p>
 <hr>
-<img  src="{{ teacher.photo }}"/>
+<!--<img  src="{{ teacher.photo }}"/>-->
+<img  src="{% static 'images/johnkuo.jpeg' %}"/>
 <hr>
 subject:<b>{{ teacher.subject }}</b>
 manger:<b>{{ teacher.manager }}</b>
