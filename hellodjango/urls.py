@@ -2,8 +2,11 @@ from django.urls import path
 from hellodjango import views
 
 urlpatterns = [
-  path('', views.index),
-  path('/<int:no>/', views.show)
+  path('', views.login),
+  path('subject/', views.index),
+  path('subject/<int:no>/', views.show),
+  path('good/<int:no>/', views.comment),
+  path('bad/<int:no>/', views.comment),
 ]
 
 

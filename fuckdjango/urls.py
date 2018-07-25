@@ -5,5 +5,5 @@ urlpatterns = [
   path('admin/', admin.site.urls),
   # path('hrs/', include('hrs.urls')),
 
-  path('subject', include('hellodjango.urls')),
+  path('', include('hellodjango.urls')),
 ]
