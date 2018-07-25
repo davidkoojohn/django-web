@@ -11,7 +11,10 @@ def show(req, no):
   print('-----')
   print(no)
   print('-----')
-  teachers = Teacher.object.filter(subject__no=no)
+
+  teachers = Teacher.objects.filter(subject__no=no)
+
   print(teachers)
+
   ctx = {'teachers': teachers}
   return render(req, 'show.html', ctx)

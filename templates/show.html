@@ -5,6 +5,19 @@
   <title>Show</title>
 </head>
 <body>
-
+{% for teacher in teachers %}
+<h1>{{ teacher.no }}{{ teacher.name }}</h1>
+<p>{{ teacher.intro }}</p>
+<hr>
+<p>{{ teacher.motto }}</p>
+<hr>
+<img  src="{{ teacher.photo }}"/>
+<hr>
+subject:<b>{{ teacher.subject }}</b>
+manger:<b>{{ teacher.manager }}</b>
+<hr>
+<button>{{ teacher.good_count }}</button>
+<button>{{ teacher.bad_count }}</button>
+{% endfor %}
 </body>
 </html>
