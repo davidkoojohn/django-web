@@ -76,6 +76,56 @@ $ source venv/bin/activate
 
 ---
 
+# 数据库配置(usage Mysql)
+
+1. `settings.py`
+
+```
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    ...
+    'appname',
+]
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'sql_name',
+        'HOST': 'localhost',
+        'PORT': 1234,
+        'USER': 'root',
+        'PASSWORD': '123456',
+    }
+}
+```
+
+2. install mysql
+
+```
+(venv)$ pip install pymysql
+
+# Python 3需要修改项目的__init__.py
+
+import pymysql
+pymysql.install_as_MySQLdb()
+```
+
+3. `python manage.py migrate` & create database
+
+```
+mysql> drop database if exists sql_name;
+mysql> create database sql_name default charset utf8;
+```
+
+1. 编辑 models.py 文件，改变模型。
+2. 运行 python manage.py makemigrations 为模型的改变生成迁移文件。
+3. 运行 python manage.py migrate 来应用数据库迁移。
+
 ---
 
 > create modal file then run makemigrations
