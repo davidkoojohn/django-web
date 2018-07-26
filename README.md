@@ -1,7 +1,6 @@
 # Fuck-Django
 
-
-## dev workflow
+## get start
 
 1. 创建并激活虚拟环境
 
@@ -9,6 +8,7 @@
 $ python3 -m venv venv
 $ source venv/bin/activate
 ```
+
 2. 更新包管理工具pip
 
 ```
@@ -41,19 +41,14 @@ $ source venv/bin/activate
 5. 使用django-admin创建项目
 
 ```
-(venv)$ django-admin startproject projectName .
+(venv)$ django-admin startproject projectname .
 ```
 
-> `manage.py`： 一个让你用各种方式管理 Django 项目的命令行工具。
-
-> `x/__init__.py`: 一个空文件，告诉 Python 这个目录应该被认为是一个 Python 包
-
-> `x/settings.py`: Django 项目的配置文件。
-
-> `x/urls.py`: Django 项目的 URL 声明，就像你网站的“目录”。
-
-> `x/wsgi.py`: 作为你的项目的运行在 WSGI 兼容的Web服务器上的入口。
-
+* `manage.py`： 一个让你用各种方式管理 Django 项目的命令行工具。
+* `projectname/__init__.py`: 一个空文件，告诉 Python 这个目录应该被认为是一个 Python 包
+* `projectname/settings.py`: Django 项目的配置文件。
+* `projectname/urls.py`: Django 项目的 URL 声明，就像你网站的“目录”。
+* `projectname/wsgi.py`: 作为你的项目的运行在 WSGI 兼容的Web服务器上的入口。
 
 6. start server
 
@@ -66,20 +61,20 @@ $ source venv/bin/activate
 
 ---
 
-## create pages
-
-1. create page(创建名为hrs（人力资源系统）的应用（注：一个项目可以包含多个应用）)
+## create app（注：一个项目可以包含多个应用）
 
 ```
-(venv)$ python manage.py startapp hrs
+(venv)$ python manage.py startapp appname
 ```
 
-* `admin.py`：可以用来注册模型，让Django自动创建管理界面。
-* `apps.py`：当前应用的配置
-* `migrations/`：存放与模型有关的数据库迁移信息
-* `models.py`：存放应用的数据模型，即实体类及其之间的关系（MVC/MVT中的M）
-* `tests.py`：包含测试应用各项功能的测试类和测试函数。
-* `views.py`：处理请求并返回响应的函数（MVC中的C，MVT中的V）
+* `appname/admin.py`：可以用来注册模型，让Django自动创建管理界面。
+* `appname/apps.py`：当前应用的配置
+* `appname/migrations/`：存放与模型有关的数据库迁移信息
+* `appname/models.py`：存放应用的数据模型，即实体类及其之间的关系（MVC/MVT中的M）
+* `appname/tests.py`：包含测试应用各项功能的测试类和测试函数。
+* `appname/views.py`：处理请求并返回响应的函数（MVC中的C，MVT中的V）
+
+---
 
 ---
 
@@ -124,5 +119,6 @@ $ source venv/bin/activate
 ## 参考
 
 * [Django官方文档](https://docs.djangoproject.com/zh-hans/2.0/)
-
+  
+  * [get start](https://docs.djangoproject.com/zh-hans/2.0/intro/tutorial01/)
 
