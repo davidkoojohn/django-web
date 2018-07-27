@@ -1,6 +1,31 @@
 from django.http import HttpResponse
+from django.template import loader
+
+from .models import Question, Choice
 
 def index(request):
+  latest_question_list = Question.objects.order_by('-pub_date')[:5]
+  # print(latest_question_list)
+  # output = ', '.join([q.question_text for q in latest_question_list])
+  # return HttpResponse(output)
 
-  return HttpResponse('hello django')
+  template = loader.get_template('polls/index.html')
+  context = {
+    'latest_question_list': latest_question_list
+  }
+  return HttpResponse(template.render(context, request))
+
+def detail(request, question_id):
+
+  return HttpResponse('detail %s' % question_id)
+
+
+def results(request, question_id):
+
+  return HttpResponse('results %s' % question_id)
+
+def vote(request, question_id):
+
+  return HttpResponse('vote %s' % question_id)
+
 
