@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.template import loader
+from django.shortcuts import render
 
 from .models import Question, Choice
 
@@ -9,11 +10,13 @@ def index(request):
   # output = ', '.join([q.question_text for q in latest_question_list])
   # return HttpResponse(output)
 
-  template = loader.get_template('polls/index.html')
+  # template = loader.get_template('polls/index.html')
   context = {
     'latest_question_list': latest_question_list
   }
-  return HttpResponse(template.render(context, request))
+  # return HttpResponse(template.render(context, request))
+
+  return render(request, 'polls/index.html', context)
 
 def detail(request, question_id):
 
