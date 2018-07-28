@@ -168,6 +168,12 @@ mysql> create database sql_name default charset utf8;
 
 ```
 (venv)$ python manage.py createsuperuser
+
+class ChoiceAdmin(admin.ModelAdmin):
+  list_display = ('question', 'choice_text', 'votes')
+  ordering = ('id',)
+  
+admin.site.register(Choice, ChoiceAdmin)
 ```
 
 ## [Django模型最佳实践](https://github.com/jackfrued/Python-100-Days/blob/master/Day41-55/02.%E6%B7%B1%E5%85%A5%E6%A8%A1%E5%9E%8B.md#django%E6%A8%A1%E5%9E%8B%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5)
