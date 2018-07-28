@@ -168,11 +168,14 @@ mysql> create database sql_name default charset utf8;
 
 ```
 (venv)$ python manage.py createsuperuser
+```
 
+# add model to admin
+
+```python
 class ChoiceAdmin(admin.ModelAdmin):
   list_display = ('question', 'choice_text', 'votes')
   ordering = ('id',)
-  
 admin.site.register(Choice, ChoiceAdmin)
 ```
 
