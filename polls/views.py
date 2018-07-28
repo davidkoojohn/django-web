@@ -50,7 +50,7 @@ class IndexView(generic.ListView):
 
 class DetailView(generic.DetailView):
   model = Question
-  template_name = 'polls/detail.html'
+  # template_name = 'polls/detail.html'
 
 class ResultsView(generic.DetailView):
   model = Question
