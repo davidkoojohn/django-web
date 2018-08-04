@@ -193,6 +193,16 @@ STATIC_URL = '/static/'
 {% load '***/***.***' %}
 ```
 
+# [自定义后台界面和风格](https://docs.djangoproject.com/zh-hans/2.0/intro/tutorial07/#customize-the-admin-look-and-feel)
+
+> 在 templates 目录内创建名为 admin 的目录，随后，将存放 Django 默认模板的目录（django/contrib/admin/templates）内的模板文件 admin/***.html 复制到这个目录内。
+
+如果你不知道 Django 源码在你系统的哪个位置，运行以下命令：
+
+```
+(venv)$ python -c "import django; print(django.__path__)"
+```
+
 # requirements.txt
 
 
