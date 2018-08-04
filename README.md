@@ -193,6 +193,18 @@ STATIC_URL = '/static/'
 {% load '***/***.***' %}
 ```
 
+# requirements.txt
+
+
+```
+# 生成requirements.txt
+(venv)$ pip freeze > requirements.txt
+
+# 安装requirements.txt依赖
+pip install -r requirements.txt
+```
+
+
 ## [Django模型最佳实践](https://github.com/jackfrued/Python-100-Days/blob/master/Day41-55/02.%E6%B7%B1%E5%85%A5%E6%A8%A1%E5%9E%8B.md#django%E6%A8%A1%E5%9E%8B%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5)
 
 * 正确的为模型和关系字段命名。
