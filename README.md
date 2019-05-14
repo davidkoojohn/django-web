@@ -5,8 +5,9 @@
 1. 创建并激活虚拟环境
 
 ```
-$ python3 -m venv venv
-$ source venv/bin/activate
+$ python3 -m venv venv      # 创建venv虚拟环境
+$ source venv/bin/activate  # 激活venv
+$ deactivate                # 退出 venv
 ```
 
 2. 更新包管理工具pip
